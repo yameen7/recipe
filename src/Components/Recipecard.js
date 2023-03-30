@@ -38,7 +38,7 @@ export const RecipeCard = ({recipeObject,setR_id}) => {
         <hr />
         <ul>
             {(recipeObject.ingredience).map((ingredenceItem, index) => {
-                return ingredienceId === index ? <EditIngredience key={index} value={ingredenceItem} /> : <Ingredience key={index} fn={setId} Ingredence={ingredenceItem} index={index} id={recipeObject.id} />
+                return ingredienceId === index ? <EditIngredience key={index} id={index} r_id={recipeObject.id} ingredenceItem={recipeObject.ingredience} cncl={setId} /> : <Ingredience key={index} fn={setId} Ingredence={ingredenceItem} index={index} id={recipeObject.id} />
             })}
         </ul>
         <hr />
